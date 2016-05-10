@@ -12,5 +12,6 @@ print r2.status, r2.reason
 
 data2 = r2.read()
 
-
+print len(data1)
+print len(data2)
 conn.close()

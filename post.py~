@@ -1,5 +1,5 @@
 import httplib
-conn = httplib.HTTPSConnection("www.google.com")
+conn = httplib.HTTPSConnection("www.python.org")
 conn.request("GET", "/")
 r1 = conn.getresponse()
 print r1.status, r1.reason
@@ -11,6 +11,6 @@ r2 = conn.getresponse()
 print r2.status, r2.reason
 
 data2 = r2.read()
-print data1,data2
 
+print len(data)
 conn.close()
