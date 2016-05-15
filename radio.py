@@ -4,14 +4,17 @@ import cgi, cgitb
 # Create instance of FieldStorage
 form = cgi.FieldStorage()
 # Get data from fields
-first_name = form.getvalue('first_name')
-last_name= form.getvalue('last_name')
+if form.getvalue('subject'):
+
+	subject = form.getvalue('subject')
+else:
+	subject = "Not set"
 print "Content-type:text/html\r\n\r\n"
 print "<html>"
 print "<head>"
-print "<title>Hello - Second CGI Program</title>"
+print "<title>Radio - Fourth CGI Program</title>"
 print "</head>"
 print "<body>"
-print "<h2>Hello %s %s</h2>" % (first_name, last_name)
+print "<h2> Selected Subject is %s</h2>" % subject
 print "</body>"
 print "</html>"
