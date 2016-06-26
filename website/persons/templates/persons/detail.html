@@ -1,0 +1,12 @@
+<img src = "{{items.country}} ">
+
+<h1>The skill - {{ items.skill}}</h1>
+<h2>About u - {{items.aboutu}}</h2>
+<h3>number of years{{items.years}}</h3>
+
+<ul>
+    {% for item in items.subitems_set.all %}
+         <li> rank of person {{item.rank}} - subject mastered {{item.subject}}</li>
+    {% endfor %}
+
+</ul>

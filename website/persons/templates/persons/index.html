@@ -1,0 +1,10 @@
+{% if items %}
+    <h4>Here are all my items</h4>
+    <ul>
+        {% for item in items %}
+            <li><a href="/skills/{{ item.id }}/"> {{item.skill}} </a> </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>No Items left</h3>
+{% endif %}

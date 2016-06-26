@@ -1,7 +1,9 @@
 from django.http import HttpResponse
-
+from django.shortcuts import render
+from .models import items,subitems
 
 def index(request):
-    return HttpResponse("<h1> This is skills App </h1>")
+    return render(request,'persons/index.html',{'items':items.objects.all()})
+
 def detail(request,person_id):
-    return HttpResponse("<h2>details of the skill "+ str (person_id) + "</h2>")
+   return render(request,'persons/detail.html',{'items': items.objects.get(pk=person_id)})
